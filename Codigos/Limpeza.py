@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 
-df = pd.read_csv('DATABASE.csv', sep=';', encoding='latin1', skiprows=3, skipfooter=2, engine='python')
+df = pd.read_csv('dados\DATABASE.csv', sep=';', encoding='latin1', skiprows=3, skipfooter=2, engine='python')
 df.replace('-', 0, inplace=True)
 
 
@@ -10,7 +10,7 @@ colunas_numericas = df.columns[1:]
 df[colunas_numericas] = df[colunas_numericas].apply(pd.to_numeric)
 
 
-df.to_csv('DATABASE_LIMPO.csv', sep=',', encoding='utf-8-sig', index=False)
+df.to_csv('dados\DATABASE_LIMPO.csv', sep=',', encoding='utf-8-sig', index=False)
 
 
 # 1. Carregamos a nossa base já limpa

@@ -11,7 +11,7 @@ pd.set_option('display.width', 1000)
 pd.options.display.float_format = '{:.2f}'.format
 
 #chamando tabela ja limpa, filtrando a ultima linha "total" para não interferir na nossas analises
-df = pd.read_csv('DATABASE_LIMPO.csv')
+df = pd.read_csv('dados\DATABASE_LIMPO.csv')
 df_analise = df[df['Região Metropolitana - RIDE'] != 'Total']
 
 
